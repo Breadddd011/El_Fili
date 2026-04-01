@@ -489,7 +489,7 @@
 
   // ── audio ──
   const spAudioSrcs = [
-  'audios/kabanata19.mp3',   // Chapter 19 - Ang Mitsa
+  'El_Fili/audio/kabanata19.mp3',   // Chapter 19 - Ang Mitsa
   '',   // Chapter 20 - Ang Tagahatol
   '',   // Chapter 21 - Nahati ang Maynila
   '',   // Chapter 22 - Ang pagtatanghal
