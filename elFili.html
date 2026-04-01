@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Filibusterismo - Ang buod</title>
+<link rel="stylesheet" href="elFili.css">
+</head>
+<body>
+<div id="stars"></div>
+
+<!-- audio -->
+<div id="stickyPlayer">
+  <audio id="chapterAudio" preload="auto"></audio>
+  <div class="sp-scrubber-row">
+    <div class="sp-time" id="spTime">0:00 / 0:00</div>
+    <div class="sp-track" id="spTrack" onclick="spSeek(event)">
+      <div class="sp-fill" id="spFill"><div class="sp-handle"></div></div>
+    </div>
+  </div>
+  <div class="sp-controls-row">
+    <div class="sp-wave" id="spWave">
+      <span style="height:8px"></span><span style="height:14px"></span>
+      <span style="height:18px"></span><span style="height:10px"></span>
+      <span style="height:6px"></span>
+    </div>
+    <div class="sp-chapter-label" id="spLabel">—</div>
+    <button class="sp-btn" onclick="spSkip(-10)">⏮ 10s</button>
+    <button class="sp-play-btn" id="spPlayBtn" onclick="spToggle()" disabled>▶</button>
+    <button class="sp-btn" onclick="spSkip(10)">10s ⏭</button>
+    <button class="sp-speed-btn" id="spSpeedBtn" onclick="spCycleSpeed()">1×</button>
+  </div>
+</div>
+
+<!-- hp (chapter screen only) -->
+<div class="hp-bar-container" id="hpBar" style="display:none">
+  <div class="hp-label">BUHAY</div>
+  <div class="hp-bar"><div class="hp-fill" id="hpFill" style="width:100%"></div></div>
+  <div class="score-display">PUNTOS: <span id="scoreDisplay">0</span></div>
+</div>
+
+<!-- char tooltip -->
+<div class="char-tooltip" id="charTooltip">
+  <div class="char-tooltip-name" id="ttName"></div>
+  <div class="char-tooltip-desc" id="ttDesc"></div>
+</div>
+
+<!-- TITLE SCREEN -->
+<div id="title-screen">
+  <div class="pixel-box" style="max-width:500px;padding:30px;text-align:center;">
+    <div style="font-family:'VT323',monospace;font-size:14px;color:rgba(245,200,66,0.5);margin-bottom:8px;">JOSE RIZAL PRESENTS</div>
+
+    <svg width="120" height="80" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" style="image-rendering:pixelated;margin-bottom:12px;display:block;margin-left:auto;margin-right:auto;">
+      <rect x="0" y="60" width="120" height="20" fill="#1a3a5c"/>
+      <rect x="10" y="62" width="20" height="4" fill="#2980b9" opacity="0.5"/>
+      <rect x="60" y="65" width="30" height="4" fill="#2980b9" opacity="0.5"/>
+      <rect x="20" y="44" width="80" height="18" fill="#8B4513"/>
+      <rect x="15" y="52" width="90" height="10" fill="#A0522D"/>
+      <rect x="25" y="36" width="70" height="10" fill="#c8a46e"/>
+      <rect x="58" y="5" width="4" height="35" fill="#5d3a1a"/>
+      <rect x="30" y="8" width="28" height="28" fill="#f0e6c8" opacity="0.9"/>
+      <rect x="62" y="8" width="20" height="20" fill="#f0e6c8" opacity="0.7"/>
+      <rect x="62" y="5" width="12" height="8" fill="#c0392b"/>
+      <rect x="35" y="46" width="6" height="6" fill="#f5c842"/>
+      <rect x="50" y="46" width="6" height="6" fill="#f5c842"/>
+      <rect x="65" y="46" width="6" height="6" fill="#f5c842"/>
+      <rect x="80" y="46" width="6" height="6" fill="#f5c842"/>
+    </svg>
+
+    <div class="pixel-title">EL FILIBUSTERISMO</div>
+    <div class="pixel-subtitle">― ang laro ng pakikibaka ―</div>
+
+    <div style="font-family:'VT323',monospace;font-size:16px;color:rgba(240,230,200,0.6);margin:12px 0;line-height:1.6;">
+      Maging si Simoun.<br>Alamin ang katotohanan.<br>Harapin ang kapalaran.
+    </div>
+
+    <button class="start-btn" onclick="startGame()">▶ MAGSIMULA</button>
+    <div class="progress-text" id="progressText">NATUTUNAN: 0/7 KABANATA</div>
+  </div>
+</div>
+
+<!-- GAME SCREEN -->
+<div id="game-screen">
+
+  <!-- MAP: sidebar + preview panel -->
+  <div id="map-screen">
+
+    <!-- LEFT: chapter list -->
+    <div class="map-sidebar">
+      <div class="map-sidebar-title">🗺 MAPA NG KWENTO</div>
+      <div class="map-sidebar-sub">Pumili ng kabanata</div>
+
+      <div class="chapter-list" id="chapterList"></div>
+
+      <div class="sidebar-score">
+        <div class="hp-label">BUHAY</div>
+        <div class="hp-bar"><div class="hp-fill" id="sidebarHpFill" style="width:100%"></div></div>
+        <div class="score-line">PUNTOS: <span id="sidebarScore">0</span></div>
+        <div class="score-line" style="margin-top:3px;" id="sidebarProgress">NATUTUNAN: 0/7</div>
+      </div>
+    </div>
+
+    <!-- RIGHT: preview panel -->
+    <div class="map-preview" id="mapPreview">
+
+      <!-- empty state -->
+      <div class="preview-empty" id="previewEmpty">
+        <svg width="80" height="60" viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg" style="image-rendering:pixelated">
+          <rect x="20" y="30" width="40" height="20" fill="#1a1a3a"/>
+          <rect x="15" y="38" width="50" height="12" fill="#252540"/>
+          <rect x="36" y="5" width="8" height="28" fill="#2a2a4a"/>
+          <rect x="20" y="8" width="16" height="22" fill="#2e2e50" opacity="0.8"/>
+          <rect x="44" y="8" width="12" height="16" fill="#2e2e50" opacity="0.6"/>
+          <rect x="36" y="3" width="16" height="6" fill="#c0392b"/>
+          <rect x="26" y="40" width="4" height="4" fill="#f5c842" opacity="0.5"/>
+          <rect x="36" y="41" width="4" height="4" fill="#f5c842" opacity="0.5"/>
+          <rect x="46" y="40" width="4" height="4" fill="#f5c842" opacity="0.5"/>
+        </svg>
+        <p>← Pumili ng kabanata sa kaliwa</p>
+        <p style="margin-top:6px;font-size:16px;opacity:0.6">upang makita ang detalye</p>
+      </div>
+
+      <!-- preview card (hidden until selection) -->
+      <div class="preview-card" id="previewCard">
+
+        <!-- header: mini scene + title + dialogue -->
+        <div class="preview-header">
+          <div class="preview-scene-mini">
+            <canvas id="previewCanvas" width="100" height="90"></canvas>
+          </div>
+          <div class="preview-meta">
+            <span class="preview-num" id="pvNum"></span>
+            <div class="preview-title" id="pvTitle"></div>
+            <span class="preview-speaker" id="pvSpeaker"></span>
+            <div class="preview-dialogue" id="pvDialogue"></div>
+          </div>
+        </div>
+
+        <!-- buod -->
+        <div class="preview-buod">
+          <div class="preview-buod-label">BUOD NG KABANATA</div>
+          <div class="preview-buod-text" id="pvBuod"></div>
+        </div>
+
+        <!-- characters -->
+        <div class="preview-chars-label">MGA TAUHAN</div>
+        <div class="preview-chars-row" id="pvCharsRow"></div>
+
+        <!-- enter button -->
+        <button class="preview-play-btn" id="pvPlayBtn" onclick="enterChapterFromPreview()">
+          ▶ PUMASOK SA KABANATA
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CHAPTER SCREEN                              -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="chapter-screen">
+    <div class="chapter-header">
+      <button class="back-btn" onclick="showMap()">◀ BUMALIK SA MAPA</button>
+      <div class="chapter-title-box">
+        <span class="chapter-num-big" id="chNumBig"></span>
+        <h2 id="chTitleBig"></h2>
+      </div>
+    </div>
+
+    <!-- scene + dialogue: one unified box -->
+    <div class="scene-container">
+      <div class="scene-image-wrap">
+        <img id="chapterImg" src="" alt="Scene">
+      </div>
+
+      <div class="dialogue-box">
+        <div class="speaker-name" id="dialogueSpeaker">TAGAPAGSALAYSAY</div>
+        <div class="dialogue-text" id="dialogueText"></div>
+      </div>
+    </div>
+
+    <!-- characters -->
+    <div class="characters-row" id="charsRow"></div>
+
+    <!-- buod -->
+    <div class="buod-section">
+      <div class="buod-label">BUOD NG KABANATA</div>
+      <div class="buod-text" id="buodText"></div>
+    </div>
+
+    <!-- go to quiz -->
+    <button class="go-quiz-btn" onclick="goToQuiz()">▶ PUMUNTA SA QUIZ</button>
+  </div>
+
+  <!-- quiz -->
+  <div id="quiz-screen">
+    <div class="chapter-header">
+      <button class="back-btn" onclick="backToChapter()">◀ BUMALIK SA KABANATA</button>
+      <div class="chapter-title-box">
+        <span class="chapter-num-big" id="quizChNum"></span>
+        <h2 id="quizChTitle"></h2>
+      </div>
+    </div>
+
+    <div class="quiz-section">
+      <div class="quiz-title">SUBOK NG KAALAMAN</div>
+      <div class="quiz-question" id="quizQuestion"></div>
+      <div class="quiz-choices" id="quizChoices"></div>
+      <div class="quiz-feedback" id="quizFeedback"></div>
+      <button class="next-chapter-btn" id="nextChBtn" onclick="nextChapter()">SUSUNOD NA KABANATA ▶</button>
+    </div>
+  </div>
+
+</div>
+<script src="elFili.js"></script>
+</body>
+</html>
