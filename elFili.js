@@ -490,12 +490,12 @@
   // ── audio ──
   const spAudioSrcs = [
   'audios/Kabanata19.mp3',   // Chapter 19 - Ang Mitsa
-  'audio/kab20.mp3',   // Chapter 20 - Ang Tagahatol
-  'audio/kab21.mp3',   // Chapter 21 - Nahati ang Maynila
-  'audio/kab22.mp3',   // Chapter 22 - Ang pagtatanghal
-  'audio/kab23.mp3',   // Chapter 23 - Namatay si Maria Clara
-  'audio/kab24.mp3',   // Chapter 24 - Mga Panaginip
-  'audio/kab25.mp3'    // Chapter 25 - Tawanan at Iyakan
+  '',   // Chapter 20 - Ang Tagahatol
+  '',   // Chapter 21 - Nahati ang Maynila
+  '',   // Chapter 22 - Ang pagtatanghal
+  '',   // Chapter 23 - Namatay si Maria Clara
+  '',   // Chapter 24 - Mga Panaginip
+  ''    // Chapter 25 - Tawanan at Iyakan
   ];
 
   const spSpeeds = [0.75, 1, 1.25, 1.5, 2];
