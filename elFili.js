@@ -28,7 +28,7 @@
       image: "https://images.esquiremag.ph/esquiremagph/images/2020/06/17/old-school-photos-main-image1.jpg",
       dialogue: "Ang bawat isa ay may sariling pangarap... ngunit ilan sa kanila ang handang makipaglaban?",
       scene: "crowd",
-      buod: `Ipinakita sa kabanatang ito ang iba't ibang tauhan na may kani-kanilang pag-aakalang maayos ang kanilang buhay. Nakikita natin ang mga estudyante, pari, at ilustrado na naniniwala sa hinaharap — ngunit hindi nila alam ang maitim na plano ni Simoun. Itinampok ang kaibahan ng mayaman at mahirap sa lipunang Pilipino sa ilalim ng Español.`,
+      buod: `Ang kabanata ay tungkol sa isang hindi makatarungang paghuhusga na nagpapakita ng katiwalian sa sistema, kung saan ang kapangyarihan ang nangingibabaw kaysa sa katotohanan.`,
       characters: [
         { name: "Isagani", color: "#3d5a3e", accent: "#7dffb0" },
         { name: "Paulita", color: "#7b3a6e", accent: "#ff99dd" },
@@ -36,11 +36,11 @@
       quiz: { q: "Sino ang pangunahing tauhan na umaasa pa rin sa mapayapang pagbabago?", choices: ["Simoun","Padre Florentino","Isagani","Basilio"], correct: 2, feedback: "Tama! Si Isagani ang bata at idealistang umaasa pa sa pagbabago ng lipunan." }
     },
     {
-      num: 21, title: "Nahati ang Maynila", speaker: "TAGAPAGSALAYSAY",
+      num: 21, title: "Mga Anyo ng Maynila", speaker: "TAGAPAGSALAYSAY",
       image: "https://www.vice.com/wp-content/uploads/sites/2/2021/03/1615273436169-fr307300.jpeg", 
       dialogue: "Sa Maynila, ang bawat mukha ay nagtatago ng isang lihim...",
       scene: "manila",
-      buod: `Inilalarawan ng kabanata ang iba't ibang uri ng tao sa Maynila — ang mga negosyante, pari, sundalong Español, at mga Pilipinong nagsisikap mabuhay. Ipinapakita ang korupsiyon, pagkukunwari, at pagkakaiba ng uri sa lipunan. Ginamit ni Rizal ang satirang larawan ng mga tauhang ito upang punahin ang Espanyol na pamumuno at ang mga Pilipinong nagpapaalipin sa kanilang sarili.`,
+      buod: `Ang kabanata ay tungkol sa pagkakahati ng Maynila sa mayayaman at mahihirap, na nagpapakita ng hindi pantay na kalagayan ng lipunan.`,
       characters: [
         { name: "Don Custodio", color: "#1a3a6e", accent: "#8cb4ff" },
         { name: "Padre Camorra", color: "#3a1a00", accent: "#ff8844" },
@@ -52,7 +52,7 @@
       image: "https://quezon.gov.ph/wp-content/uploads/2025/11/Pagtatanghal-ng-mga-talentadong-Quezonians-handog-ng-Dulayan-Theater-Organization-Inc-Nov-17-2025-768x512.jpg",
       dialogue: "Ang sayaw ng mga tauhan... palabas lamang ang lahat. Ngunit sa likod ng kurtina, isang bagay ang naghihintay.",
       scene: "theater",
-      buod: `Nagtitipon ang mga prominenteng tao sa isang palabas-entablado. Sa harap ng lahat, nagpapakita ng magandang anyo ngunit sa likod ay puno ng intriga at lihim. Ginamit ni Rizal ang imahe ng teatro bilang metapora ng lipunan — ang lahat ay nagsisilbing artista at manonood nang sabay-sabay. Nandito rin ang mahalagang sandali kung saan muling natuklasan ni Isagani ang totoo tungkol sa kanyang minamahal na si Paulita.`,
+      buod: `Ang kabanata ay tungkol sa isang pagtatanghal na nagpapakita ng iba’t ibang ugali ng mga tao at nagsisilbing salamin ng magulong at mapagkunwaring lipunan.`,
       characters: [
         { name: "Isagani", color: "#3d5a3e", accent: "#7dffb0" },
         { name: "Juanito Pelaez", color: "#6e3d1a", accent: "#ffcc88" },
@@ -60,11 +60,11 @@
       quiz: { q: "Bilang metapora, ano ang kinakatawan ng teatro sa kabanata?", choices: ["Katotohanan ng buhay","Pagkukunwari ng lipunan","Tagumpay ng rebolusyon","Pagmamahal"], correct: 1, feedback: "Tama! Ang teatro ay metapora ng pagkukunwari at kataksilan sa lipunan." }
     },
     {
-      num: 23, title: "Namatay si Maria Clara", speaker: "BASILIO",
+      num: 23, title: "Isang Bangkay", speaker: "BASILIO",
       image: "https://cdn.shopify.com/s/files/1/1004/9308/files/Crayon_sketch_of_Leonor_Rivera_by_Rizal_grande.jpg?v=1585571208",
       dialogue: "Isang bangkay... ngunit sino ang pumatay? Ang sistema o ang tao?",
       scene: "death",
-      buod: `Natuklasan ang isang bangkay na nagpapabago ng lahat. Ang kamatayan ay nagsisilbing babala at simbolo ng kabiguan ng sistemang Espanyol. Nagsisimulang makita ni Basilio ang katotohanan ng mundo — na ang kanyang inaaasam na kalayaan ay malayo pa. Ang kabanata ay puno ng dramatikong pagtuklas at emosyon, na nagpapakita ng epekto ng kolonisasyon sa buhay ng mga Pilipino.`,
+      buod: `Ang kabanata ay tungkol sa balita ng pagkamatay ni Maria Clara na lalong nagpatindi sa galit at paghihiganti ni Simoun.`,
       characters: [
         { name: "Basilio", color: "#8B4513", accent: "#c8a46e" },
         { name: "Simoun", color: "#2c2c2c", accent: "#f5c842" },
@@ -76,7 +76,7 @@
       image: "https://images.esquiremag.ph/esquiremagph/images/2020/06/16/old-school-photos-8.jpg",
       dialogue: "Pangarap ko ang isang bansang malaya... kahit ito ay nagsisimula pa lamang sa gunita.",
       scene: "dream",
-      buod: `Inilalarawan ang mga pangarap ng iba't ibang tauhan — si Isagani para sa kalayaan, si Basilio para sa kaalaman, at si Simoun para sa paghihiganti. Ngunit ang mga pangarap ay maaaring maging paniwalang mapanganib. Nababanaag dito ang pakikibakang panloob ng mga Pilipino — kung pipiliin ba ang kapayapaan o rebolusyon. Ginagamit ni Rizal ang pangarap bilang simbolo ng pag-asa at kalagayan ng bansang Pilipinas.`,
+      buod: `Ang kabanata ay tungkol sa mga panaginip ng mga tauhan na nagpapakita ng kanilang damdamin, takot, at alaala ng nakaraan.`,
       characters: [
         { name: "Isagani", color: "#3d5a3e", accent: "#7dffb0" },
         { name: "Basilio", color: "#8B4513", accent: "#c8a46e" },
@@ -89,7 +89,7 @@
       image: "https://images.esquiremag.ph/esquiremagph/images/2022/06/11/index-1-29720220611.jpg",
       dialogue: "Ang tawanan at iyakan ng buhay ay magkasama. Ngunit sa huli, ang katotohanan ay nananatili.",
       scene: "end",
-      buod: `Sa kabanatang ito, nabigo ang plano ni Simoun. Nabigyan siya ng lason ni Padre Florentino upang hindi siya mahuli. Sa kanyang huling sandali, sinabi ni Simoun ang kanyang mga dahilan — ang pagmamahal sa bansa at galit sa sistema. Sinagot siya ni Padre Florentino ng may karunungan: ang kalayaan ay hindi makukuha sa pamamagitan ng karahasan, kundi sa pamamagitan ng edukasyon at kabutihang-loob. Itinatapon ng pari ang mga yaman ni Simoun sa dagat — para sa susunod na henerasyon na higit na karapat-dapat na gumamit nito.`,
+      buod: `Ang kabanata ay tungkol sa magkasabay na kasiyahan at kalungkutan ng mga tao, na nagpapakita ng hindi pagkakapantay-pantay sa lipunan.`,
       characters: [
         { name: "Simoun", color: "#2c2c2c", accent: "#f5c842" },
         { name: "P. Florentino", color: "#3a1a5e", accent: "#bb88ff" },
@@ -489,17 +489,17 @@
 
   // ── audio ──
   const spAudioSrcs = [
-  './audios/kabanata_19.mp3',   // Chapter 19 - Ang Mitsa
-  '',   // Chapter 20 - Ang Tagahatol
-  '',   // Chapter 21 - Nahati ang Maynila
-  '',   // Chapter 22 - Ang pagtatanghal
-  '',   // Chapter 23 - Namatay si Maria Clara
-  '',   // Chapter 24 - Mga Panaginip
-  ''    // Chapter 25 - Tawanan at Iyakan
+  './audios/kabanata_19.mp3',   // Ang Mitsa
+  './audios/kabanata_20.mp3',   // Ang Tagahatol
+  './audios/kabanata_21.mp3',   // Nahati ang Maynila
+  './audios/kabanata_22.mp3',   // Ang pagtatanghal
+  './audios/kabanata_23.mp3',   // Namatay si Maria Clara
+  './audios/kabanata_24.mp3',   // Chapter 24 - Mga Panaginip
+  './audios/kabanata_25.mp3'    // Chapter 25 - Tawanan at Iyakan
   ];
 
   const spSpeeds = [0.75, 1, 1.25, 1.5, 2];
-  let spSpeedIdx = 1;
+  let spSpeedIdx = 1; 
 
   function spGetAudio() { return document.getElementById('chapterAudio'); }
 
