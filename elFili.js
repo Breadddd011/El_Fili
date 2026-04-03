@@ -12,7 +12,7 @@
 
   const chapters = [
     {
-      num: 19, title: "Ang Mitsa", speaker: "SIMOUN",
+      num: 19, title: "Ang Mitsa", speaker: "SIMOUN", // waiting 
       image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgliwuKG0m-UducBxEHVnlUr3R2XQS_dlPCiAEnHNajNhJ9ix6ph4sfeRK7fYzxZKc69xgpfPNFj8_a3EVTJlDC9-qtivviZ16Pwx18lT-UMx2R3cxdD76bihpdbO1GRF1_qNFSAEclkzA/s1600/palito+ng+posporo+3.jpg",
       dialogue: "Ang mitsa ay nakakabit na. Ang apoy ng rebolusyon ay malapit nang magsimula...",
       scene: "fuse",
@@ -26,75 +26,85 @@
     {
       num: 20, title: "Ang Tagahatol", speaker: "TAGAPAGSALAYSAY",
       image: "https://images.esquiremag.ph/esquiremagph/images/2020/06/17/old-school-photos-main-image1.jpg",
-      dialogue: "Ang bawat isa ay may sariling pangarap... ngunit ilan sa kanila ang handang makipaglaban?",
+      dialogue: "Ang kabanata ay tungkol sa isang hindi makatarungang paghuhusga na nagpapakita ng katiwalian sa sistema, kung saan ang kapangyarihan ang nangingibabaw kaysa sa katotohanan.",
       scene: "crowd",
-      buod: `Ang kabanata ay tungkol sa isang hindi makatarungang paghuhusga na nagpapakita ng katiwalian sa sistema, kung saan ang kapangyarihan ang nangingibabaw kaysa sa katotohanan.`,
+      buod: `Sa kabanatang ito, ipinakita ang isang paglilitis kung saan hinatulan ang isang tauhan sa gitna ng impluwensya ng kapangyarihan at katiwalian. Ang “tagahatol” ay sumisimbolo sa mga taong may kapangyarihang magpasya, ngunit hindi laging makatarungan ang kanilang mga desisyon.
+            Makikita na ang hustisya ay nagiging bulag sa katotohanan dahil sa impluwensya ng mga makapangyarihan. Sa halip na pairalin ang tama, ang desisyon ay naaayon sa interes ng mga nasa itaas. Ipinapakita rin dito ang kawalan ng boses ng mga naaapi at kung paano sila nahuhusgahan nang hindi patas.
+            Ipinahihiwatig ng kabanata na ang sistemang hustisya sa lipunan ay maaaring gamitin bilang kasangkapan ng pang-aapi kung ito ay nasa maling kamay.`,
       characters: [
         { name: "Isagani", color: "#3d5a3e", accent: "#7dffb0" },
         { name: "Paulita", color: "#7b3a6e", accent: "#ff99dd" },
       ],
-      quiz: { q: "Sino ang pangunahing tauhan na umaasa pa rin sa mapayapang pagbabago?", choices: ["Simoun","Padre Florentino","Isagani","Basilio"], correct: 2, feedback: "Tama! Si Isagani ang bata at idealistang umaasa pa sa pagbabago ng lipunan." }
+      quiz: { q: "Ano ang pangunahing mensahe ni Rizal tungkol sa sistemang hustisya sa kabanatang ito?", choices: ["Ang mga mahihirap ay laging nananalo sa huli.","Ang hustisya ay nagiging kasangkapan ng pang-aapi kapag ito ay kontrolado ng makapangyarihan.","Lahat ng tagahatol ay likas na masama at walang alam sa batas.","Hindi kailangan ng abogado sa paglilitis basta't may pera."], correct: 1, feedback: "Tama! Malinaw na sinabi sa teksto na ang hustisya ay naging bulag at ginamit na kasangkapan ng pang-aapi ng mga nasa itaas." }
     },
     {
       num: 21, title: "Mga Anyo ng Maynila", speaker: "TAGAPAGSALAYSAY",
       image: "https://www.vice.com/wp-content/uploads/sites/2/2021/03/1615273436169-fr307300.jpeg", 
-      dialogue: "Sa Maynila, ang bawat mukha ay nagtatago ng isang lihim...",
+      dialogue: "Ang kabanata ay tungkol sa pagkakahati ng Maynila sa mayayaman at mahihirap, na nagpapakita ng hindi pantay na kalagayan ng lipunan.",
       scene: "manila",
-      buod: `Ang kabanata ay tungkol sa pagkakahati ng Maynila sa mayayaman at mahihirap, na nagpapakita ng hindi pantay na kalagayan ng lipunan.`,
+      buod: `Sa kabanatang ito, ipinakita ang iba’t ibang kalagayan ng mga tao sa Maynila—ang mayayaman at ang mahihirap. Nahahati ang lungsod sa dalawang uri ng pamumuhay: ang marangya at masayang buhay ng mga nakaaangat, at ang mahirap at puno ng suliraning buhay ng mga naaapi.
+            Makikita rito na habang ang ilan ay nagdiriwang at nagpapakasaya, ang iba naman ay naghihirap at patuloy na nakakaranas ng kawalang-katarungan. Ipinapakita ng kabanata ang malinaw na agwat sa lipunan at kung paano ito nagdudulot ng hindi pagkakapantay-pantay.
+            Ipinahihiwatig din na ang ganitong paghahati ng lipunan ay maaaring magbunga ng tensyon at kaguluhan kung hindi ito mababago.`,
       characters: [
         { name: "Don Custodio", color: "#1a3a6e", accent: "#8cb4ff" },
         { name: "Padre Camorra", color: "#3a1a00", accent: "#ff8844" },
       ],
-      quiz: { q: "Anong uri ng pagsusuri ang ginawa ni Rizal sa kabanatang ito?", choices: ["Pagpupuri sa Espanyol","Satira ng lipunan at korupsiyon","Kwento ng pag-ibig","Kasaysayan ng Pilipinas"], correct: 1, feedback: "Tama! Gumamit si Rizal ng satira para punahin ang lipunan at korupsiyon." }
+      quiz: { q: "Bakit inilarawan ni Rizal ang magkaibang kalagayan ng mga tao sa Maynila?", choices: ["Upang ipakita ang kagandahan ng arkitektura sa lungsod.","Upang ituro ang tamang paraan ng pagtitipid ng pera.","Upang ilantad ang malinaw na agwat sa lipunan at ang kawalan ng pagkakapantay-pantay.","Upang hikayatin ang mga tao na lumipat sa probinsya."], correct: 2, feedback: "Tama! Ginamit ni Rizal ang magkaibang larawan ng Maynila upang ilantad ang agwat sa lipunan at ang kawalan ng pagkakapantay-pantay." }
     },
     {
       num: 22, title: "Ang pagtatanghal", speaker: "TAGAPAGSALAYSAY",
       image: "https://quezon.gov.ph/wp-content/uploads/2025/11/Pagtatanghal-ng-mga-talentadong-Quezonians-handog-ng-Dulayan-Theater-Organization-Inc-Nov-17-2025-768x512.jpg",
-      dialogue: "Ang sayaw ng mga tauhan... palabas lamang ang lahat. Ngunit sa likod ng kurtina, isang bagay ang naghihintay.",
+      dialogue: "Ang kabanata ay tungkol sa isang pagtatanghal na nagpapakita ng iba’t ibang ugali ng mga tao at nagsisilbing salamin ng magulong at mapagkunwaring lipunan.",
       scene: "theater",
-      buod: `Ang kabanata ay tungkol sa isang pagtatanghal na nagpapakita ng iba’t ibang ugali ng mga tao at nagsisilbing salamin ng magulong at mapagkunwaring lipunan.`,
+      buod: `Sa kabanatang ito, naganap ang isang pagtatanghal sa teatro na dinaluhan ng iba’t ibang uri ng tao sa lipunan—mga mayayaman, opisyal, at karaniwang mamamayan. Habang abala ang lahat sa panonood, makikita ang kanilang mga ugali, tulad ng pagpapakitang-yaman, pakikipagplastikan, at pagiging mapanghusga.
+            Ipinakita rin dito ang pagkukunwari ng lipunan, kung saan ang panlabas na kaayusan at aliwan ay nagtatago ng tunay na kalagayan ng bansa. Ang pagtatanghal ay nagsisilbing salamin ng lipunan—puno ng kasinungalingan, hindi pagkakapantay-pantay, at pagpapanggap.`,
       characters: [
         { name: "Isagani", color: "#3d5a3e", accent: "#7dffb0" },
         { name: "Juanito Pelaez", color: "#6e3d1a", accent: "#ffcc88" },
       ],
-      quiz: { q: "Bilang metapora, ano ang kinakatawan ng teatro sa kabanata?", choices: ["Katotohanan ng buhay","Pagkukunwari ng lipunan","Tagumpay ng rebolusyon","Pagmamahal"], correct: 1, feedback: "Tama! Ang teatro ay metapora ng pagkukunwari at kataksilan sa lipunan." }
+      quiz: { q: "Ano ang sinisimbolo ng 'pagtatanghal' sa teatro sa kabanatang ito?", choices: ["Ang pag-unlad ng sining at kultura sa Pilipinas.","Ang pagkakaisa ng lahat ng uri ng tao sa lipunan.","Ang pagkukunwari at pagpapanggap ng lipunang itinatago ang tunay na dumi sa likod ng aliwan.","Ang pagsuporta ng pamahalaan sa mga lokal na artista."], correct: 2, feedback: "Tama! Ang teatro ay simbolo ng pagkukunwari at pagpapanggap ng lipunan — itinatago ang tunay na madilim na kalagayan ng bansa sa likod ng aliwan." }
     },
     {
       num: 23, title: "Isang Bangkay", speaker: "BASILIO",
       image: "https://cdn.shopify.com/s/files/1/1004/9308/files/Crayon_sketch_of_Leonor_Rivera_by_Rizal_grande.jpg?v=1585571208",
-      dialogue: "Isang bangkay... ngunit sino ang pumatay? Ang sistema o ang tao?",
+      dialogue: "Ang kabanata ay tungkol sa balita ng pagkamatay ni Maria Clara na lalong nagpatindi sa galit at paghihiganti ni Simoun.",
       scene: "death",
-      buod: `Ang kabanata ay tungkol sa balita ng pagkamatay ni Maria Clara na lalong nagpatindi sa galit at paghihiganti ni Simoun.`,
+      buod: `Sa kabanatang ito, kumalat ang balita tungkol sa pagkamatay ni Maria Clara, na dating minamahal ni Crisostomo Ibarra (na ngayon ay si Simoun). Ayon sa balita, siya ay namatay sa loob ng kumbento.
+            Ang pangyayaring ito ay nagdulot ng matinding lungkot at galit kay Simoun. Lalong tumibay ang kanyang hangarin na maghiganti at ipagpatuloy ang kanyang planong paghihimagsik laban sa mga mapang-abuso.
+            Ipinapakita sa kabanata na ang personal na trahedya ay maaaring maging mitsa ng mas malalim na galit at paghahangad ng pagbabago.`,
       characters: [
         { name: "Basilio", color: "#8B4513", accent: "#c8a46e" },
         { name: "Simoun", color: "#2c2c2c", accent: "#f5c842" },
       ],
-      quiz: { q: "Ano ang simbolismo ng bangkay sa kabanatang ito?", choices: ["Tagumpay ng mga Pilipino","Kabiguan ng kolonyal na sistema","Simula ng digmaan","Kapangyarihan ng simbahan"], correct: 1, feedback: "Tama! Ang bangkay ay simbolo ng kabiguan at karahasan ng kolonyal na sistema." }
+      quiz: { q: "Ano ang naging epekto ng balita ng pagkamatay ni Maria Clara kay Simoun?", choices: ["Nagpasya siyang magpatawad at maging prayle na lamang.","Nawalan siya ng pag-asa at itinigil ang lahat ng kanyang mga plano.","Lalong tumibay ang kanyang galit at hangarin na ituloy ang himagsikan.","Naghanap siya ng ibang babaeng papalit sa puso niya."], correct: 2, feedback: "Tama! Ang pagkamatay ni Maria Clara ang naging mitsa para lalong tumibay ang plano ni Simoun na maghimagsik." }
     },
     {
       num: 24, title: "Mga Panaginip", speaker: "ISAGANI",
       image: "https://images.esquiremag.ph/esquiremagph/images/2020/06/16/old-school-photos-8.jpg",
-      dialogue: "Pangarap ko ang isang bansang malaya... kahit ito ay nagsisimula pa lamang sa gunita.",
+      dialogue: "Ang kabanata ay tungkol sa mga panaginip ng mga tauhan na nagpapakita ng kanilang damdamin, takot, at alaala ng nakaraan..",
       scene: "dream",
-      buod: `Ang kabanata ay tungkol sa mga panaginip ng mga tauhan na nagpapakita ng kanilang damdamin, takot, at alaala ng nakaraan.`,
+      buod: `Sa kabanatang ito, ipinakita ang iba’t ibang panaginip ng mga tauhan, lalo na ni Basilio. Sa kanyang panaginip, nakita niya ang kanyang ina na si Sisa, na tila nagbibigay babala at paalala tungkol sa kanyang nakaraan.
+            Ang mga panaginip ay sumasalamin sa kanilang mga iniisip, takot, at pag-asa. Ipinapakita rin dito na ang nakaraan ay patuloy na nakakaapekto sa kasalukuyan, at maaaring magsilbing gabay sa kanilang mga magiging desisyon.`,
       characters: [
         { name: "Isagani", color: "#3d5a3e", accent: "#7dffb0" },
         { name: "Basilio", color: "#8B4513", accent: "#c8a46e" },
         { name: "Simoun", color: "#2c2c2c", accent: "#f5c842" },
       ],
-      quiz: { q: "Ang pangarap ni Simoun ay para sa?", choices: ["Pagmamahal kay Maria Clara","Paghihiganti at rebolusyon","Kapayapaan sa Español","Pag-uwi sa Europa"], correct: 1, feedback: "Tama! Ang pangarap ni Simoun ay ang paghihiganti sa pamamagitan ng rebolusyon." }
+      quiz: { q: "Ano ang ipinahihiwatig ng paglitaw ni Sisa sa panaginip ni Basilio?", choices: ["Nakalimutan na ni Basilio ang kanyang nakaraan.","Ang nakaraan ay patuloy na nakakaapekto sa kasalukuyan at nagsisilbing gabay o babala.","Mayaman na si Basilio kaya hindi na niya kailangang matakot.","Gusto ni Sisa na maghiganti si Basilio sa lahat ng tao."], correct: 1, feedback: "Tama! Ang panaginip ni Basilio tungkol kay Sisa ay nagpapakita na ang nakaraan ay nagsisilbing gabay at babala sa kanyang mga desisyon." }
     },
     {
       num: 25, title: "Tawanan at Iyakan", speaker: "PADRE FLORENTINO",
       image: "https://images.esquiremag.ph/esquiremagph/images/2022/06/11/index-1-29720220611.jpg",
-      dialogue: "Ang tawanan at iyakan ng buhay ay magkasama. Ngunit sa huli, ang katotohanan ay nananatili.",
+      dialogue: "Ang kabanata ay tungkol sa magkasabay na kasiyahan at kalungkutan ng mga tao, na nagpapakita ng hindi pagkakapantay-pantay sa lipunan.",
       scene: "end",
-      buod: `Ang kabanata ay tungkol sa magkasabay na kasiyahan at kalungkutan ng mga tao, na nagpapakita ng hindi pagkakapantay-pantay sa lipunan.`,
+      buod: `Sa kabanatang ito, ipinakita ang magkasalungat na damdamin sa isang pagtitipon—may mga taong nagtatawanan at nagsasaya, habang ang iba naman ay nagdurusa at umiiyak. Habang ang mga makapangyarihan ay abala sa kasiyahan at walang pakialam, ang mga naaapi ay patuloy na naghihirap.
+            Makikita rito ang matinding pagkakaiba ng kalagayan ng mga tao sa lipunan. Ang tawanan ay sumisimbolo sa kasiyahan ng mga nakaaangat, samantalang ang iyakan ay kumakatawan sa paghihirap ng mga mahihirap.
+            Ipinapakita ng kabanata na sa iisang lugar o panahon, maaaring magkasabay ang saya at lungkot—depende sa katayuan ng tao sa lipunan.`,
       characters: [
         { name: "Simoun", color: "#2c2c2c", accent: "#f5c842" },
         { name: "P. Florentino", color: "#3a1a5e", accent: "#bb88ff" },
       ],
-      quiz: { q: "Ano ang aral ng nobela ayon kay Padre Florentino?", choices: ["Dapat mag-rebolusyon ang mga Pilipino","Ang kalayaan ay nakukuha sa edukasyon at kabutihan","Ang Español ay mabuting namumuno","Walang pag-asa ang Pilipinas"], correct: 1, feedback: "Tama! Ang kalayaan ay nakukuha sa edukasyon, kabutihan, at tamang paghahanda — hindi sa karahasan." }
+      quiz: { q: "Ano ang kinakatawan ng 'tawanan' at 'iyakan' sa pagtitipong naganap?", choices: ["Ang mga taong lasing laban sa mga taong antok.","Ang magandang panahon laban sa masamang panahon.","Ang kasiyahan ng mga nasa itaas habang ang mga naaapi ay patuloy na nagdurusa.","Ang kompetisyon sa pagitan ng mga mag-aaral sa unibersidad."], correct: 2, feedback: "Tama! Ipinapakita ng kabanata ang matinding kontras — ang saya ng mga makapangyarihan ay katumbas ng pagdurusa ng mga naaapi sa iisang lipunan." }
     }
   ];
 
