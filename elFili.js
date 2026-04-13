@@ -471,7 +471,7 @@
       btn.classList.add('wrong');
       hp = Math.max(0, hp - 20);
       fb.className = 'quiz-feedback show-wrong';
-      fb.textContent = `＞︿＜ Mali! Ang tamang sagot: ${ch.quiz.choices[ch.quiz.correct]}. ${ch.quiz.feedback}`;
+      fb.textContent = `＞︿＜ Mali! Ang tamang sagot: ${ch.quiz.choices[ch.quiz.correct]}`;
     }
 
     const nextIdx = currentChapter + 1;
